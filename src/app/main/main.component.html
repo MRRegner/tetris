@@ -1,0 +1,23 @@
+<div class="container-fluid">
+<h1>Tetris Project</h1>
+<button class="btn btn-danger" (click)="run()" *ngIf="!this.isRunning">Start</button>
+<button class="btn btn-success" (click)="run()" *ngIf="this.isRunning">Pause</button>
+<div class="row">
+    <div class="col-md-3 col-0"></div>
+    <div class="col-md-6 col-12">
+        <canvas #canvas id="canvas" width="200" height="100" >
+        </canvas>
+    
+    </div>
+    
+    <div class="col-md-3 col-0">
+        <br>
+        <strong>Puntuacion: <span>{{this.score}}</span></strong>
+        <br>
+        <strong>Running <span>{{this.isRunning}}</span></strong>
+        <br>
+        <strong>Line Counter <span>{{this.TotalLineCounter}}</span></strong>
+        <h2>Level: {{this.Level.stage}}</h2>
+    </div>
+</div>
+</div>
